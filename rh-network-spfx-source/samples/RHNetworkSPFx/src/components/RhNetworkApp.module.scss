@@ -1,0 +1,70 @@
+/* RH Network App - CSS Module para responsividade adicional */
+
+.webPartContainer {
+  /* Garantir que o WebPart ocupe todo o espaço disponível */
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box;
+  
+  /* Reset de margens e padding que podem vir do SharePoint */
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  /* Garantir overflow adequado */
+  overflow: visible;
+}
+
+/* Correções específicas para SharePoint Online */
+:global(.CanvasZone) .webPartContainer {
+  width: 100% !important;
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 480px) {
+  .webPartContainer {
+    /* Em telas muito pequenas, ajustar padding */
+    :global(.appContainer) {
+      padding: 8px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .webPartContainer {
+    /* Em telas grandes, limitar largura máxima */
+    :global(.appContainer) {
+      max-width: 1400px;
+    }
+  }
+}
+
+/* Correções para modo escuro do SharePoint */
+:global([data-theme="dark"]) .webPartContainer {
+  color-scheme: dark;
+}
+
+/* Garantir que cards tenham altura consistente */
+:global(.quickLinkCard) {
+  min-height: 80px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+:global(.quickLinkCard:hover) {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Melhorar responsividade do header */
+:global(.headerContent) {
+  min-width: 0; /* Permite que o texto seja truncado se necessário */
+}
+
+:global(.headerContent h2) {
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Garantir que avatars não quebrem o layout */
+:global(.quickLinkCard) :global(.fui-Avatar) {
+  flex-shrink: 0 !important;
+}

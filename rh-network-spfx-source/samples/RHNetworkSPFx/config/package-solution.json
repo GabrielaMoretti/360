@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "rh-network-spfx-client-side-solution",
+    "id": "d8d2a8a0-1234-4a6a-9f8d-8e7b5c4a3f2e",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "RH Team",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Sistema de Navegação em Rede para RH"
+      },
+      "longDescription": {
+        "default": "Web Part que permite navegação em rede entre perfis de colaboradores e projetos no SharePoint"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Productivity"]
+    },
+    "features": [
+      {
+        "title": "rh-network-spfx Feature",
+        "description": "The feature that activates elements of the rh-network-spfx solution.",
+        "id": "a8b9c1d2-3456-4e7f-8901-2345a6b7c8d9",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/rh-network-spfx.sppkg"
+  }
+}
